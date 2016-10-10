@@ -84,12 +84,25 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Shadowzey-Blog">
-<meta property="og:url" content="https://shadowzey.github.io/index.html">
+<meta name="description" content="最近公司事情挺多的都没啥时间写博客（其实都是懒），大半夜睡不着，正好写一写。因为开发的一个项目因为客户要求，需要用到短信报警，活分到我手上，研究了一下短信猫的相关东西，感觉挺好玩的，把一些配置过程写在这。
+一些驱动的安装因为用的是USB接口的猫，需要USB转串口的一些驱动，其实linux内核版本高于2.4.31就已经自带的有了，insmod一下就成。低于这个版本号的可能要手动下载安装一下。
+
+在驱">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux下短信猫的配置">
+<meta property="og:url" content="https://shadowzey.github.io/blog/2016/10/linux下短信猫的配置/index.html">
 <meta property="og:site_name" content="Shadowzey-Blog">
+<meta property="og:description" content="最近公司事情挺多的都没啥时间写博客（其实都是懒），大半夜睡不着，正好写一写。因为开发的一个项目因为客户要求，需要用到短信报警，活分到我手上，研究了一下短信猫的相关东西，感觉挺好玩的，把一些配置过程写在这。
+一些驱动的安装因为用的是USB接口的猫，需要USB转串口的一些驱动，其实linux内核版本高于2.4.31就已经自带的有了，insmod一下就成。低于这个版本号的可能要手动下载安装一下。
+
+在驱">
+<meta property="og:updated_time" content="2016-10-10T18:37:19.522Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shadowzey-Blog">
+<meta name="twitter:title" content="linux下短信猫的配置">
+<meta name="twitter:description" content="最近公司事情挺多的都没啥时间写博客（其实都是懒），大半夜睡不着，正好写一写。因为开发的一个项目因为客户要求，需要用到短信报警，活分到我手上，研究了一下短信猫的相关东西，感觉挺好玩的，把一些配置过程写在这。
+一些驱动的安装因为用的是USB接口的猫，需要USB转串口的一些驱动，其实linux内核版本高于2.4.31就已经自带的有了，insmod一下就成。低于这个版本号的可能要手动下载安装一下。
+
+在驱">
 
 
 
@@ -110,9 +123,9 @@
 
 
 
-  <link rel="canonical" href="https://shadowzey.github.io/"/>
+  <link rel="canonical" href="https://shadowzey.github.io/blog/2016/10/linux下短信猫的配置/"/>
 
-  <title> Shadowzey-Blog </title>
+  <title> linux下短信猫的配置 | Shadowzey-Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -133,9 +146,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -232,9 +243,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -254,10 +265,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/blog/2016/10/linux下短信猫的配置/" itemprop="url">
-                  linux下短信猫的配置
-                </a>
+                linux下短信猫的配置
               
             
           </h1>
@@ -304,9 +312,7 @@
       
 
       
-        
-          
-            <p>最近公司事情挺多的都没啥时间写博客（其实都是懒），大半夜睡不着，正好写一写。<br>因为开发的一个项目因为客户要求，需要用到短信报警，活分到我手上，研究了一下短信猫的相关东西，感觉挺好玩的，把一些配置过程写在这。</p>
+        <p>最近公司事情挺多的都没啥时间写博客（其实都是懒），大半夜睡不着，正好写一写。<br>因为开发的一个项目因为客户要求，需要用到短信报警，活分到我手上，研究了一下短信猫的相关东西，感觉挺好玩的，把一些配置过程写在这。</p>
 <h1 id="一些驱动的安装"><a href="#一些驱动的安装" class="headerlink" title="一些驱动的安装"></a>一些驱动的安装</h1><p>因为用的是USB接口的猫，需要USB转串口的一些驱动，其实linux内核版本高于2.4.31就已经自带的有了，insmod一下就成。低于这个版本号的可能要手动下载安装一下。</p>
 <ol>
 <li><p>在驱动目录下执行如下命令安装驱动模块</p>
@@ -356,16 +362,20 @@ Serial device: closing device
 </code></pre><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><pre><code>echo -e &quot;服务器着火辣，快来呀！！&quot; | gnokii --sendsms 1365139XXXX
 </code></pre><p>先就写到这，以后再补充。<br>感觉跟python结合可以做很多有意思的事呢，想买个自己写东西给喜欢的妹子用，可是好像喜欢的妹子已经有喜欢的人了，那还是留着自己用吧。睡觉。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -373,336 +383,51 @@ Serial device: closing device
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/blog/2016/09/入坑archlinux的一些总结/" rel="next" title="入坑archlinux的一些总结">
+                <i class="fa fa-chevron-left"></i> 入坑archlinux的一些总结
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/blog/2016/09/入坑archlinux的一些总结/" itemprop="url">
-                  入坑archlinux的一些总结
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-25T20:38:14+08:00" content="2016-09-25">
-              2016-09-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/blog/2016/09/入坑archlinux的一些总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="/blog/2016/09/入坑archlinux的一些总结/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>因为在windows开发坑太多，也不怎么玩游戏了，干脆就换linux，自己也用过ubuntu，centos，debian等发行版，觉得反正要换不如用个逼格高一点的。然后根据wiki的介绍：</p>
-<blockquote>
-<p>Arch Linux是朝向轻量（lightweight）以及简单（simple）的Linux发行版。其中“简单”（Simplicity）被定义为“避免不必要或复杂的修改”，也就是说，是由开发者角度定义，而非用户角度思考。</p>
-</blockquote>
-<p>看起来挺靠谱的，那就他了。</p>
-<h1 id="archlinux简介"><a href="#archlinux简介" class="headerlink" title="archlinux简介"></a>archlinux简介</h1><p><img src="http://oe5x4zsbj.bkt.clouddn.com/archlinux_logo.png" alt="arch-logo"></p>
-<p>还是引用wiki</p>
-<blockquote>
-<p>Arch Linux 是通用 i686/x86-64 GNU/Linux 行版。Arch采用滚动升级模式，尽全力提供最新的稳定版软件。初始安装的Arch只是一个基本系统，随后用户可以根据自己的喜好安装需要的软件并配置成符合自己理想的系统。</p>
-</blockquote>
-<h1 id="archlinux的安装"><a href="#archlinux的安装" class="headerlink" title="archlinux的安装"></a>archlinux的安装</h1><p>arch因为只提供了命令行的安装界面，因此对于部分人可能因为这个原因就止步了，其实按照<a href="https://wiki.archlinux.org/index.php/Installation_guide" target="_blank" rel="external">arch wiki</a>上的步骤一步一步来也没多大问题。archlinux的安装大概分为三部分：</p>
-<ul>
-<li>磁盘分区与挂载</li>
-<li>系统安装</li>
-<li>系统配置</li>
-</ul>
-<p>再贴一些我安装系统时参考的资料:</p>
-<ul>
-<li><a href="https://bbs.archlinuxcn.org/viewtopic.php?id=1037" target="_blank" rel="external">Arch Linux 安装指南[2016.01]</a></li>
-<li><a href="http://www.cnblogs.com/eli01/p/3559503.html" target="_blank" rel="external">archlinux安装(gnome3桌面环境)</a></li>
-</ul>
-<h1 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h1><h2 id="yaourt"><a href="#yaourt" class="headerlink" title="yaourt"></a>yaourt</h2><p>Yaourt (Yet Another User Repository Tool 用户的另一个软件仓库管理工具)是一个社区为增加pacman对AUR的无缝访问而做的, 它允许和自动化软件包编译和安装在AUR上成千上万的PKGBUILDs, 和成千上万的Arch仓库里的软件。</p>
-<pre><code>sudo pacman -S yaourt
-</code></pre><h2 id="chromium"><a href="#chromium" class="headerlink" title="chromium"></a>chromium</h2><p>chrome的开源版本，使用上没什么差异，不过没有自带flash插件，安装：</p>
-<pre><code>sudo pacman -S chromium
-</code></pre><p>安装flash插件：</p>
-<pre><code>yaourt chromium-pepper-flash
-</code></pre><h2 id="mplayer"><a href="#mplayer" class="headerlink" title="mplayer"></a>mplayer</h2><p>MPlayer是GNU/Linux下常用的影音播放器，对多种文件格式支持良好，用户颇为广泛。</p>
-<pre><code>sudo pacman -S mplayer
-</code></pre><h2 id="aira2"><a href="#aira2" class="headerlink" title="aira2"></a>aira2</h2><p>Aria2 是一个轻量的多协议多源命令行下载工具，支持 HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink 等协议下的下载。</p>
-<pre><code>sudo pacman -S aria2
-</code></pre><p>使用：</p>
-<pre><code>aria2 -x5 http://example.org/something.iso # -x为使用多个线程下载
-</code></pre><h2 id="shadowsocks"><a href="#shadowsocks" class="headerlink" title="shadowsocks"></a>shadowsocks</h2><p>Shadowsocks是一个轻量级socks5代理，以Python写成。用途大家都知道。</p>
-<pre><code>sudo pacman -S shadowsocks libsodium python2-numpy python2-salsa20 python2-m2crypto
-</code></pre><p>拷贝默认配置文件：</p>
-<pre><code>sudo cp /etc/shadowsocks/example.json /etc/shadowsocks/config.json
-# 按自己shadowsocks配置修改
-</code></pre><p>后台启动服务并且开机启动：</p>
-<pre><code>sudo systemctl enable shadowsocks@config
-sudo systemctl start shadowsocks@config
-</code></pre><h2 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h2><p>特别好用的shell，强烈推荐。安装：</p>
-<pre><code>sudo pacman -S zsh
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
-</code></pre><p>切换到zsh：</p>
-<pre><code>chsh -s /usr/local/bin/zsh
-</code></pre><p>安装后可以在配置文件~/.zshrc中添加各种牛逼的插件以及更改主题。<br>最厉害的还有自动补全功能，装好后大概是这个样子</p>
-<p><img src="http://oe5x4zsbj.bkt.clouddn.com/bafd0e6000495e627cb04a31947c55e5.gif" alt="incr"></p>
-<p>首先下载这个插件：<br>官网：<a href="http://mimosa-pudica.net/zsh-incremental.html" target="_blank" rel="external">http://mimosa-pudica.net/zsh-incremental.html</a></p>
-<p>打开速度太慢了，直接把代码贴这吧：</p>
-<p>incr-0.2.zsh</p>
-<pre><code># Incremental completion for zsh
-# by y.fujii &lt;y-fujii at mimosa-pudica.net&gt;, public domain
-
-
-autoload -U compinit
-zle -N self-insert self-insert-incr
-zle -N vi-cmd-mode-incr
-zle -N vi-backward-delete-char-incr
-zle -N backward-delete-char-incr
-zle -N expand-or-complete-prefix-incr
-compinit
-
-bindkey -M viins &apos;^[&apos; vi-cmd-mode-incr
-bindkey -M viins &apos;^h&apos; vi-backward-delete-char-incr
-bindkey -M viins &apos;^?&apos; vi-backward-delete-char-incr
-bindkey -M viins &apos;^i&apos; expand-or-complete-prefix-incr
-bindkey -M emacs &apos;^h&apos; backward-delete-char-incr
-bindkey -M emacs &apos;^?&apos; backward-delete-char-incr
-bindkey -M emacs &apos;^i&apos; expand-or-complete-prefix-incr
-
-unsetopt automenu
-compdef -d scp
-compdef -d tar
-compdef -d make
-compdef -d java
-compdef -d svn
-compdef -d cvs
-
-# TODO:
-#     cp dir/
-
-now_predict=0
-
-function limit-completion
-{
-    if ((compstate[nmatches] &lt;= 1)); then
-        zle -M &quot;&quot;
-    elif ((compstate[list_lines] &gt; 6)); then
-        compstate[list]=&quot;&quot;
-        zle -M &quot;too many matches.&quot;
-    fi
-}
-
-function correct-prediction
-{
-    if ((now_predict == 1)); then
-        if [[ &quot;$BUFFER&quot; != &quot;$buffer_prd&quot; ]] || ((CURSOR != cursor_org)); then
-            now_predict=0
-        fi
-    fi
-}
-
-function remove-prediction
-{
-    if ((now_predict == 1)); then
-        BUFFER=&quot;$buffer_org&quot;
-        now_predict=0
-    fi
-}
-
-function show-prediction
-{
-    # assert(now_predict == 0)
-    if
-        ((PENDING == 0)) &amp;&amp;
-        ((CURSOR &gt; 1)) &amp;&amp;
-        [[ &quot;$PREBUFFER&quot; == &quot;&quot; ]] &amp;&amp;
-        [[ &quot;$BUFFER[CURSOR]&quot; != &quot; &quot; ]]
-    then
-        cursor_org=&quot;$CURSOR&quot;
-        buffer_org=&quot;$BUFFER&quot;
-        comppostfuncs=(limit-completion)
-        zle complete-word
-        cursor_prd=&quot;$CURSOR&quot;
-        buffer_prd=&quot;$BUFFER&quot;
-        if [[ &quot;$buffer_org[1,cursor_org]&quot; == &quot;$buffer_prd[1,cursor_org]&quot; ]]; then
-            CURSOR=&quot;$cursor_org&quot;
-            if [[ &quot;$buffer_org&quot; != &quot;$buffer_prd&quot; ]] || ((cursor_org != cursor_prd)); then
-                now_predict=1
-            fi
-        else
-            BUFFER=&quot;$buffer_org&quot;
-            CURSOR=&quot;$cursor_org&quot;
-        fi
-        echo -n &quot;\e[32m&quot;
-    else
-        zle -M &quot;&quot;
-    fi
-}
-
-function preexec
-{
-    echo -n &quot;\e[39m&quot;
-}
-
-function vi-cmd-mode-incr
-{
-    correct-prediction
-    remove-prediction
-    zle vi-cmd-mode
-}
-
-function self-insert-incr
-{
-    correct-prediction
-    remove-prediction
-    if zle .self-insert; then
-        show-prediction
-    fi
-}
-
-function vi-backward-delete-char-incr
-{
-    correct-prediction
-    remove-prediction
-    if zle vi-backward-delete-char; then
-        show-prediction
-    fi
-}
-
-function backward-delete-char-incr
-{
-    correct-prediction
-    remove-prediction
-    if zle backward-delete-char; then
-        show-prediction
-    fi
-}
-
-function expand-or-complete-prefix-incr
-{
-    correct-prediction
-    if ((now_predict == 1)); then
-        CURSOR=&quot;$cursor_prd&quot;
-        now_predict=0
-        comppostfuncs=(limit-completion)
-        zle list-choices
-    else
-        remove-prediction
-        zle expand-or-complete-prefix
-    fi
-}
-</code></pre><p>将代码copy下来放到指定目录。<br>建议放到~/.oh-my-zsh/plugins/incr/目录下<br>然后</p>
-<pre><code>echo &apos;source ~/.oh-my-zsh/plugins/incr/incr*.zsh&apos; ~/.zshrc
-source ~/zshrc
-</code></pre><p>就行了</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="http://blog.csdn.net/leesheen/article/details/51322273?locationNum=7" target="_blank" rel="external">Lee_Sheen-Arch Linux 安装小记</a><br><a href="http://yijiebuyi.com/blog/36955b84c57e338dd8255070b80829bf.html" target="_blank" rel="external">一介布衣-incr.zsh 补全插件</a><br>待续</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="/blog/2016/10/linux下短信猫的配置/"
+     data-title="linux下短信猫的配置"
+     data-content=""
+     data-url="https://shadowzey.github.io//blog/2016/10/linux下短信猫的配置/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -710,6 +435,14 @@ source ~/zshrc
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="/blog/2016/10/linux下短信猫的配置/"
+           data-title="linux下短信猫的配置" data-url="https://shadowzey.github.io//blog/2016/10/linux下短信猫的配置/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -729,8 +462,17 @@ source ~/zshrc
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -791,6 +533,17 @@ source ~/zshrc
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一些驱动的安装"><span class="nav-number">1.</span> <span class="nav-text">一些驱动的安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装minicom，gnokii"><span class="nav-number">2.</span> <span class="nav-text">安装minicom，gnokii</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置minicom，gnokii"><span class="nav-number">3.</span> <span class="nav-text">配置minicom，gnokii</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用"><span class="nav-number">4.</span> <span class="nav-text">使用</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -887,6 +640,10 @@ source ~/zshrc
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
