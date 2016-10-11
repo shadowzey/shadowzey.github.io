@@ -96,7 +96,7 @@
 一些驱动的安装因为用的是USB接口的猫，需要USB转串口的一些驱动，其实linux内核版本高于2.4.31就已经自带的有了，insmod一下就成。低于这个版本号的可能要手动下载安装一下。
 
 在驱">
-<meta property="og:updated_time" content="2016-10-10T18:42:25.509Z">
+<meta property="og:updated_time" content="2016-10-11T13:38:54.700Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux下短信猫的配置">
 <meta name="twitter:description" content="最近公司事情挺多的都没啥时间写博客（其实都是懒），大半夜睡不着，正好写一写。因为开发的一个项目因为客户要求，需要用到短信报警，活分到我手上，研究了一下短信猫的相关东西，感觉挺好玩的，把一些配置过程写在这。
@@ -334,13 +334,12 @@
         <p>最近公司事情挺多的都没啥时间写博客（其实都是懒），大半夜睡不着，正好写一写。<br>因为开发的一个项目因为客户要求，需要用到短信报警，活分到我手上，研究了一下短信猫的相关东西，感觉挺好玩的，把一些配置过程写在这。</p>
 <h1 id="一些驱动的安装"><a href="#一些驱动的安装" class="headerlink" title="一些驱动的安装"></a>一些驱动的安装</h1><p>因为用的是USB接口的猫，需要USB转串口的一些驱动，其实linux内核版本高于2.4.31就已经自带的有了，insmod一下就成。低于这个版本号的可能要手动下载安装一下。</p>
 <ol>
-<li><p>在驱动目录下执行如下命令安装驱动模块</p>
-<p> insmod usbserial.ko<br> insmod pl2303.ko</p>
+<li><p>在驱动目录下执行如下命令安装驱动模块，驱动目录：/lib/modules/内核版本/kernel/drivers/usb/serial/</p>
+<pre><code>insmod usbserial.ko
+insmod pl2303.ko
+</code></pre></li>
+<li><p>查看是否加载 lsmod，出现pl2303就是加载成功</p>
 </li>
-</ol>
-<p>驱动目录：/lib/modules/版本目录/kernel/drivers/usb/serial/</p>
-<ol>
-<li>查看是否加载 lsmod，出现pl2303就是加载成功</li>
 <li>插上usb设备，在dev目录下会出现ttyUSBxx的文件，xx一般从0开始</li>
 </ol>
 <h1 id="安装minicom，gnokii"><a href="#安装minicom，gnokii" class="headerlink" title="安装minicom，gnokii"></a>安装minicom，gnokii</h1><p>minicom是linux下串口通信的工具<br>gnokii是诺基亚出的手机开发包，可以收发短信，打电话之类的。可以看作封装了一写at指令，易于操作吧。</p>
@@ -378,7 +377,8 @@ Model        : MULTIBAND  900E  1800
 Product name : MULTIBAND  900E  1800  
 Revision     : 534_09gg.2D 1748852 
 Serial device: closing device 
-</code></pre><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><pre><code>echo -e &quot;服务器着火辣，快来呀！！&quot; | gnokii --sendsms 1365139XXXX
+</code></pre><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>发送短信</p>
+<pre><code>echo -e &quot;服务器着火辣，快来呀！！&quot; | gnokii --sendsms 1365139XXXX
 </code></pre><p>先就写到这，以后再补充。<br>感觉跟python结合可以做很多有意思的事呢，想买个自己写东西给喜欢的妹子用，可是好像喜欢的妹子已经有喜欢的人了，那还是留着自己用吧。睡觉。</p>
 
       
