@@ -96,7 +96,7 @@ Arch Linux是朝向轻量（lightweight）以及简单（simple）的Linux发行
 Arch Linux是朝向轻量（lightweight）以及简单（simple）的Linux发行版。其中“简单”（Simplicity）被定义为“避免不必要或复杂的修改”，也就是说，是由开发者角度定义，而非用">
 <meta property="og:image" content="http://oe5x4zsbj.bkt.clouddn.com/archlinux_logo.png">
 <meta property="og:image" content="http://oe5x4zsbj.bkt.clouddn.com/bafd0e6000495e627cb04a31947c55e5.gif">
-<meta property="og:updated_time" content="2016-10-10T18:38:45.739Z">
+<meta property="og:updated_time" content="2016-10-14T03:56:03.580Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="入坑archlinux的一些总结">
 <meta name="twitter:description" content="因为在windows开发坑太多，也不怎么玩游戏了，干脆就换linux，自己也用过ubuntu，centos，debian等发行版，觉得反正要换不如用个逼格高一点的。然后根据wiki的介绍：
@@ -372,6 +372,12 @@ Arch Linux是朝向轻量（lightweight）以及简单（simple）的Linux发行
 </code></pre><p>后台启动服务并且开机启动：</p>
 <pre><code>sudo systemctl enable shadowsocks@config
 sudo systemctl start shadowsocks@config
+</code></pre><h2 id="proxychains"><a href="#proxychains" class="headerlink" title="proxychains"></a>proxychains</h2><p>proxychains是一个使给定的程序的TCP连接强制通过代理连接的unix工具。支持SOCKS4，SOCKS5，HTTP(S)代理。对于SOCKS4/5支持”user/pass”认证，对于HTTP支持”basic”认证。<br>安装：</p>
+<pre><code>pacman -S proxychains
+</code></pre><p>配置：</p>
+<pre><code>vim /etc/proxychains.conf
+</code></pre><p>使用：</p>
+<pre><code>proxychains crul https://google.com
 </code></pre><h2 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h2><p>特别好用的shell，强烈推荐。安装：</p>
 <pre><code>sudo pacman -S zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
@@ -714,7 +720,7 @@ source ~/zshrc
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#archlinux简介"><span class="nav-number">1.</span> <span class="nav-text">archlinux简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#archlinux的安装"><span class="nav-number">2.</span> <span class="nav-text">archlinux的安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用软件"><span class="nav-number">3.</span> <span class="nav-text">常用软件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#yaourt"><span class="nav-number">3.1.</span> <span class="nav-text">yaourt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#chromium"><span class="nav-number">3.2.</span> <span class="nav-text">chromium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mplayer"><span class="nav-number">3.3.</span> <span class="nav-text">mplayer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#aira2"><span class="nav-number">3.4.</span> <span class="nav-text">aira2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shadowsocks"><span class="nav-number">3.5.</span> <span class="nav-text">shadowsocks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oh-my-zsh"><span class="nav-number">3.6.</span> <span class="nav-text">oh-my-zsh</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#archlinux简介"><span class="nav-number">1.</span> <span class="nav-text">archlinux简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#archlinux的安装"><span class="nav-number">2.</span> <span class="nav-text">archlinux的安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用软件"><span class="nav-number">3.</span> <span class="nav-text">常用软件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#yaourt"><span class="nav-number">3.1.</span> <span class="nav-text">yaourt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#chromium"><span class="nav-number">3.2.</span> <span class="nav-text">chromium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mplayer"><span class="nav-number">3.3.</span> <span class="nav-text">mplayer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#aira2"><span class="nav-number">3.4.</span> <span class="nav-text">aira2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shadowsocks"><span class="nav-number">3.5.</span> <span class="nav-text">shadowsocks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#proxychains"><span class="nav-number">3.6.</span> <span class="nav-text">proxychains</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oh-my-zsh"><span class="nav-number">3.7.</span> <span class="nav-text">oh-my-zsh</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
           </div>
         </section>
